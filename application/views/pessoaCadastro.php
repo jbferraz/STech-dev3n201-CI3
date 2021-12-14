@@ -10,6 +10,7 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
+        <a href="<?php echo base_url() . 'home'; ?>">Home</a>
         <h1>Cadastro de Pessoa</h1>
         <?php echo form_open('pessoa/inserir'); ?>
             <input type="text" name="nome" required placeholder="Nome aqui..."/>
@@ -49,6 +50,14 @@ and open the template in the editor.
                     <td><?php echo $pes->email; ?></td>
                     <td><?php echo $pes->telefone; ?></td>
                     <td>
+                        <?php if(!is_null($pes->cpf)){
+                            echo 'PF';
+                        }else{
+                            echo 'PJ';
+                        } ?>
+                        <a href="<?php echo base_url() . 
+                                'pessoa/editar/' .
+                                $pes->idPessoa;?>">Editar</a> | 
                         <a href="<?php echo base_url() . 
                                 'pessoa/excluir/' .
                                 $pes->idPessoa;?>">Excluir</a>
