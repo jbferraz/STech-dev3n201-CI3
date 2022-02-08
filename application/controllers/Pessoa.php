@@ -29,6 +29,7 @@ class Pessoa extends CI_Controller {
 
     public function inserir() {
         //nome no vetor deve ser o mesmo nome do campo na tabela
+        //este lado é para o BD = estou outro lado é da view
         $dados['nome'] = $this->input->post('nome');
         $dados['telefone'] = $this->input->post('telefone');
         $dados['email'] = $this->input->post('email');
