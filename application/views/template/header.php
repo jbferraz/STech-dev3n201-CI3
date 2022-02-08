@@ -17,5 +17,6 @@
                 <a class="btn btn-danger" href="<?php echo base_url(); ?>login/sair">Sair</a>
                 <br>
                 <a class="btn btn-primary" href="<?php echo base_url(); ?>pessoa">Pessoa</a> | 
-                <a class="btn btn-primary" href="<?php echo base_url(); ?>usuario">Usuário</a>
+                <a class="btn btn-primary" href="<?php echo base_url(); ?>usuario">Usuário</a> |
+                <a class="btn btn-primary" href="<?php echo base_url(); ?>carro">Carro</a>
             <?php } ?>

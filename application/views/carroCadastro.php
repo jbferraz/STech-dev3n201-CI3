@@ -32,7 +32,13 @@ and open the template in the editor.
         <table>
             <thead>
                 <tr>
-                    <th>Marca</th><th>Modelo</th><th>Placa</th><th>Portas</th><th>Proprietário</th><th>Funções</th>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                    <th>Placa</th>
+                    <th>Portas</th>
+                    <th>Cor</th>
+                    <th>Proprietário</th>
+                    <th>Funções</th>
                 </tr>
             </thead>
             <tbody>
@@ -42,6 +48,7 @@ and open the template in the editor.
                     <td><?php echo $car->modelo; ?></td>
                     <td><?php echo $car->placa; ?></td>
                     <td><?php echo $car->portas; ?></td>
+                    <td><input type="color" disabled value="<?php echo $car->cor; ?>"/></td>
                     <td><?php echo $car->idPessoa; ?></td>
                     <td>
                         <a href="<?php echo base_url() . 
