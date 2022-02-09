@@ -21,20 +21,20 @@ class Carro_model extends CI_Model {
     function inserir($p) {
         return $this->db->insert('carro', $p); //carro é o nome da tabela no banco
     }
-    
+
     function deletar($id) {
-        $this->db->where('idCarro',$id);
+        $this->db->where('idCarro', $id);
         return $this->db->delete('carro');
     }
-    
-    function editar($idCarro){
-        $this->db->where('idCarro',$idCarro);
+
+    function editar($idCarro) {
+        $this->db->where('idCarro', $idCarro);
         $result = $this->db->get('carro');
         return $result->result();
     }
-    
+
     function atualizar($data) {
-        $this->db->where('idCarro',$data['idCarro']);
+        $this->db->where('idCarro', $data['idCarro']);
         $this->db->set($data);
         return $this->db->update('carro');
     }
